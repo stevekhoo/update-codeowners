@@ -42,6 +42,10 @@ Set this input to any non-zero value (e.g. `true`) to enable full coverage of al
 This defines the path to the CODEOWNERS file.
 The default uses the path to the `.github` directory.
 
+### defaultowner
+![Required](https://img.shields.io/badge/Required-no-inactive?style=flat-square)
+![Default](https://img.shields.io/badge/Default-''-inactive?style=flat-square)
+The defaultowner input defines the user or team to be used as default codeowner.
 
 ### token
 ![Required](https://img.shields.io/badge/Required-no-inactive?style=flat-square)

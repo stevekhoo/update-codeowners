@@ -8,6 +8,11 @@ if [ -n "$INPUT_DISTRIBUTION" ]; then
   echo "Action defined distribution to $DISTRIBUTION%"
 fi
 
+if [ -n "$INPUT_DEFAULTOWNERS" ]; then
+  DEFAULTOWNERS="$INPUT_DEFAULTOWNERS"
+  echo "Action defined DEFAULTOWNERS to $DEFAULTOWNERS%"
+fi
+
 if [ -n "$INPUT_PATH" ]; then
   TARGET="$INPUT_PATH"
   echo "Action defined target path to be $TARGET"
@@ -60,6 +65,10 @@ owners() {
     dirs=$(git ls-tree -d -r --name-only HEAD)
     files=$(git ls-tree --name-only HEAD)
     files=$(printf "%s\n%s" "$dirs" "$files" | sort | uniq)
+  fi
+
+  if [ -n "$INPUT_DEFAULTOWNERS" ]; then
+    echo "* $DEFAULTOWNERS"
   fi
 
   for file in $files; do

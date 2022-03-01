@@ -31,6 +31,11 @@ inputs:
       Set this input to any non-zero value (e.g. `true`) to derive the GitHub usernames and use them instead.
     required: false
     default: ''
+  defaultowner:
+    description: |
+      This defines the default owner.
+    required: false
+    default: ''
   token:
     description: |
       A GitHub token has to be set if `inputs.username` is enabled.
