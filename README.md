@@ -107,7 +107,7 @@ jobs:
         # the token is necessary for checks to rerun after auto commit
         token: ${{ secrets.PAT }}
     - name: update code owners
-      uses: gofunky/update-codeowners@v0.3.1
+      uses: stevekhoo/update-codeowners@v0.3.4
       with:
         distribution: 25
         username: true
