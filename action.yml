@@ -31,7 +31,7 @@ inputs:
       Set this input to any non-zero value (e.g. `true`) to derive the GitHub usernames and use them instead.
     required: false
     default: ''
-  defaultowner:
+  defaultowners:
     description: |
       This defines the default owner.
     required: false
